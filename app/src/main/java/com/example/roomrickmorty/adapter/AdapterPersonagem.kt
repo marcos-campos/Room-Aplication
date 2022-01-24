@@ -30,12 +30,13 @@ class AdapterPersonagem(
         Picasso.with(context).load(imageOfPersonagem.image).into(holder.imagemDoPersonagem)
 
         holder.itemView.setOnClickListener {
-            val intent = Intent(it.context, MainCharacter::class.java)
+                val intent = Intent(it.context, MainCharacter::class.java)
 
-            intent.putExtra("dados", listaPersonagens[position])
+                intent.putExtra("dados", listaPersonagens[position])
 
-            it.context.startActivity(intent)
+                it.context.startActivity(intent)
         }
     }
+
 }
 
